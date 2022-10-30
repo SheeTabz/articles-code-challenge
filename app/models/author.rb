@@ -11,15 +11,21 @@ class Author
 def name
   self.name
 end  
+
 def articles
-  self.articles
+  Article.all.filter do |art|
+    art.author == self
+  end
 end
 
-# def add_article(magazine, title)
-#   @magazines << magazine
-#   magazine.title= self
-# end
+def magazine
+  Articles.all.map do |magazine|
+   magazine.magazines = self
+  end
 end
 
-shee = Author.new('Tabitha')
-# puts shee.add_article("New Times", "gossip")
+
+end
+
+# shee = Author.new('Tabitha')
+

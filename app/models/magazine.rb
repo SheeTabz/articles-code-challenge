@@ -20,6 +20,6 @@ def self.all
 end
 end
 
-m1 = Magazine.new('Gossip', 'Entertainment')
-m2 = Magazine.new('Nairobian', 'Events')
+# m1 = Magazine.new('Gossip', 'Entertainment')
+# m2 = Magazine.new('Nairobian', 'Events')
 #  pp Magazine.all

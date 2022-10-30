@@ -12,6 +12,14 @@ def title
     self.name
 end
 
+def author 
+    @author
+end
+
+def magazine
+    @magazine
+end
+
  def self.all
     @@all
  end
@@ -19,5 +27,3 @@ end
 
 
 
-#  art1 = Article.new('Abdullah', 'Daily Nation','Title')
-#  p Article.all

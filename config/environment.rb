@@ -2,7 +2,14 @@ require 'bundler/setup'
 Bundler.require
 require_all 'app'
 
-author1 = Author.new('Job Mudengeya')
-article1 = Article.new(author1, 'Crafts', 'Tomorrow')
+author1 = Author.new('Job')
+author2 = Author.new('Shee')
 
-puts author1.articles
+art1 = Article.new(author1,'New', 'Arise')
+art2 = Article.new(author1,'Ne', 'Arse')
+art3 = Article.new(author1,'ew', 'Arie')
+art14= Article.new(author1,'Ne', 'Aise')
+
+
+p author1.articles
+
