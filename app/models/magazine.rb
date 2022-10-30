@@ -18,6 +18,15 @@ class Magazine
 def self.all
   @@all
 end
+
+def contributors
+  mag = Article.all.filter do |art|
+    art.magazine == self
+  end
+  mag.map do |article|
+    article.author
+  end.uniq
+end
 end
 
 # m1 = Magazine.new('Gossip', 'Entertainment')

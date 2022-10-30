@@ -4,8 +4,6 @@ class Author
 
   def initialize(name)
     @name = name
-    # @articles = []
-    # @magazines = []
   end
 
 def name
@@ -19,9 +17,10 @@ def articles
 end
 
 def magazine
-  Articles.all.map do |magazine|
-   magazine.magazines = self
-  end
+ mag = self.articles.map do |magazine|
+  magazine.magazine
+ end
+ mag.uniq
 end
 
 
