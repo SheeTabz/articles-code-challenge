@@ -16,7 +16,7 @@ def articles
   end
 end
 
-def magazine
+def magazines
  mag = self.articles.map do |magazine|
   magazine.magazine
  end
@@ -26,6 +26,13 @@ end
 def add_article(magazine, title)
   Article.new(self, magazine, title)
 end
+
+def topic_areas
+  self.magazine.map do |magazine|
+    magazine.category
+  end
+end
+
 end
 
 # shee = Author.new('Tabitha')

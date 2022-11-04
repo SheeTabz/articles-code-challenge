@@ -9,7 +9,7 @@ def initialize(author, magazine, title)
     @@all << self
 end
 def title
-    self.name
+    @title
 end
 
 def author 

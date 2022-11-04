@@ -9,17 +9,17 @@ class Magazine
   end
 
   def name
-    self.name
+    @name
   end
 
   def category
-    self.category
+    @category
   end
 def self.all
   @@all
 end
 
-def contributors
+def contributing_authors
   mag = Article.all.filter do |art|
     art.magazine == self
   end
@@ -27,8 +27,21 @@ def contributors
     article.author
   end.uniq
 end
+
+def article_titles
+  mag = Article.all.filter do |art|
+    art.magazine == self
+  end
+ mag.map do |art|
+  art.title
+ end
 end
 
-# m1 = Magazine.new('Gossip', 'Entertainment')
-# m2 = Magazine.new('Nairobian', 'Events')
-#  pp Magazine.all
+def self.find_by_name(name)
+  Magazine.all.select do |magazine|
+     magazine.name  == name
+  end
+end
+
+end
+
